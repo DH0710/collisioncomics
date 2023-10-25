@@ -2,10 +2,26 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 
-const BooksSchema = new Schema({
+const ComicsSchema = new Schema({
  title: {
     type: String,
     required: true,
+ }, 
+ Company: {
+   type: String,
+   // required: true,
+}, 
+Author: {
+   type: String,
+   // required: true,
+}, 
+Illustrator: {
+   type: String,
+   // required: true,
+}, 
+ slug: {
+    type: String,
+    // required: true,
  }, 
  description: {
     type: String,
@@ -16,7 +32,7 @@ const BooksSchema = new Schema({
     // required: true,
  }, 
  stars: {
-    type: number,
+    type: Number,
     // required: true,
  }, 
  category: {
@@ -25,12 +41,9 @@ const BooksSchema = new Schema({
  }, 
  createdAt: {
     type: Date,
-    default: Date.now(),
- }, 
-
-
-
+    default: Date.now()
+ },
 });
 
 
-module.exports = mongoose.model("Book", BookSchema);
+module.exports = mongoose.model("Comics", ComicsSchema);

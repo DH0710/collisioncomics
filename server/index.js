@@ -2,7 +2,8 @@ require("dotenv").config();
 // you need CORS to fetch data
 const cors = require("cors");
 const express = require("express");
-const connectDB = require("./connectDB")
+const connectDB = require("./connectDB");
+const Comics = require("./models/Comics");
 
 
 const app = express();
