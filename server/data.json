@@ -1,9 +1,9 @@
 [
     {
-      "_id": { "$oid": "0785188231" },
+      "_id": { "$oid": "6458f2660370b02a293447b0" },
       "title": "Uncanny X-Force",
       "Company": "Marvel",
-      "thumbnail": "",
+      "thumbnail": "uncanny-xforce.jpg",
       "Author": "Rick Remender",
       "Illustrator": "Leonardo Manco",
       "slug": "uncanny-xforce",
@@ -12,10 +12,10 @@
       "category": ["action", "science-fiction"]
     },
     {
-        "_id": { "$oid":" 0785199616" },
+        "_id": { "$oid":"6458f2c50370b02a2934d5fc" },
         "title": "Spider-Man: Miles Morales Vol 1",
         "Company": "Marvel",
-        "thumbnail": "",
+        "thumbnail": "miles_morales.jpg",
         "Author": "Brian Michael Bendis",
         "Illustrator": "Sara Pichelli",
         "slug": "spider-man",
@@ -24,10 +24,10 @@
         "category": ["action", "science-fiction"]
       },
       {
-        "_id": { "$oid": "" },
+        "_id": { "$oid": "648ada707a15f23fa4ba9aa5" },
         "title": "Flashpoint",
         "Company": "DC Comics",
-        "thumbnail": "",
+        "thumbnail": "flashpoint.jpg",
         "Author": "Geoff Johns",
         "Illustrator": "Andy Kubert",
         "slug": "flash-point",
@@ -36,10 +36,10 @@
         "category": ["action", "science-fiction"]
       },
       {
-        "_id": { "$oid": "9024516722" },
+        "_id": { "$oid": "648ae00a7a15f23fa4ba9aaa" },
         "title": "Kingdom Come",
         "Company":"DC Comics",
-        "thumbnail": "",
+        "thumbnail": "kingdom-come.jpg",
         "Author": "Mark Waid",
         "Illustrator": "Todd Klein",
         "slug": "kingdom-come",
@@ -48,10 +48,10 @@
         "category": ["action", "science-fiction"]
       },
       {
-        "_id": { "$oid": "1506722822" },
+        "_id": { "$oid": "649ae53ea7fa4c85582e7724" },
         "title": "Sin City",
         "Company":"Dark Horse Comics",
-        "thumbnail": "",
+        "thumbnail": "sin-city.jpg",
         "Author": "Frank Miller",
         "Illustrator": "Frank Miller",
         "slug": "sin-city",
@@ -60,10 +60,10 @@
         "category": ["action", "mystery"]
       },
       {
-        "_id": { "$oid": " 1684058414" },
+        "_id": { "$oid": "649ae85da7fa4c85582e7727" },
         "title": "Teenage Mutant Ninja Turtles: The Last Ronin",
         "Company": "Dark Horse Comics",
-        "thumbnail": "",
+        "thumbnail": "the_last_ronin.jpg",
         "Author": "Kevin Eastman, Peter Laird",
         "Illustrator": "Various",
         "slug": "tmnt-the-last-ronin",
@@ -72,10 +72,10 @@
         "category": ["action", "science-fiction"]
       },
       {
-        "_id": { "$oid": "0963478958" },
+        "_id": { "$oid": "649ae855a7fa4c85582e7726" },
         "title": "All Talk",
         "Company": "Dark Horse Comics",
-        "thumbnail": "",
+        "thumbnail": "all_talk.jpg",
         "Author": "Bartosz Sztybor",
         "Illustrator": "Akeussel",
         "slug": "all-talk",
@@ -84,38 +84,15 @@
         "category": ["mystery"]
       },
       {
-        "_id": { "$oid": " 1401238963" },
+        "_id": { "$oid": "649aeab9a7fa4c85582e772a" },
         "title": "Watchmen",
         "Company":"DC Comics",
-        "thumbnail": "",
+        "thumbnail": "watchmen.jpg",
         "Author": "Alan Moore",
         "Illustrator": "Alan Moore",
         "slug": "watch-man",
         "description": "Watchmen begins as a murder-mystery, but soon unfolds into a planet-altering conspiracy. As the resolution comes to a head, the unlikely group of reunited heroes--Rorschach, Nite Owl, Silk Spectre, Dr. Manhattan and Ozymandias--have to test the limits of their convictions and ask themselves where the true line is between good and evil.", 
         "stars": "5",
         "category": ["action", "mystery"]
-      },
-      {
-        "_id": { "$oid": "2435613426" },
-        "title": "Batman the Killing Joke",
-        "Company":"DC Comics",
-        "thumbnail": "",
-        "Author": "Alan Moore",
-        "Illustrator": "Brian Bolland",
-        "slug": "bat-man",
-        "description": "Critically acclaimed author Alan Moore redefined graphic novel story-telling with Watchmen and V for Vendetta. In Batman: The Killing Joke, he takes on the origin of comics' greatest super-villain, The Joker, and changes Batman's world forever.", 
-        "stars": "5",
-        "category": ["action", "science-fiction", "mystery"]
-      },
-      {
-        "_id": { "$oid": "0916243672" },
-        "title": "Justice League: The Darkseid War",
-        "thumbnail": "",
-        "Author": "Geoff Johns",
-        "Illustrator": "Jason Fabok, Francis Manapul, Brad Anderson",
-        "slug": "justice league",
-        "description": "Years ago the Justice League first formed to stop Darkseid and his parademon army from invading Earth. Now Darkseid will once again make the planet a war zone, as Earth becomes the front line in his battle with the Anti-Monitor, a universe-devouring creature who can reduce whole planets to rubble. To stop their planet from becoming collateral damage in this war of gods, the Justice League must uncover the secrets of the New Gods and learn the hidden truth behind the Anti-Monitor's identity and his history with Darkseid.", 
-        "stars": "5",
-        "category": ["action", "science-fiction"]
       }
   ]
