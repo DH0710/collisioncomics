@@ -84,81 +84,38 @@
         "category": ["mystery"]
       },
       {
-        "_id": { "$oid": "" },
-        "title": "",
+        "_id": { "$oid": " 1401238963" },
+        "title": "Watchmen",
+        "Company":"DC Comics",
         "thumbnail": "",
-        "Author": "",
-        "Illustrator": "",
-        "slug": "",
-        "description": "", 
+        "Author": "Alan Moore",
+        "Illustrator": "Alan Moore",
+        "slug": "watch-man",
+        "description": "Watchmen begins as a murder-mystery, but soon unfolds into a planet-altering conspiracy. As the resolution comes to a head, the unlikely group of reunited heroes--Rorschach, Nite Owl, Silk Spectre, Dr. Manhattan and Ozymandias--have to test the limits of their convictions and ask themselves where the true line is between good and evil.", 
         "stars": "5",
-        "category": ["action", "science-fiction"]
+        "category": ["action", "mystery"]
       },
       {
-        "_id": { "$oid": "" },
-        "title": "",
+        "_id": { "$oid": "2435613426" },
+        "title": "Batman the Killing Joke",
+        "Company":"DC Comics",
         "thumbnail": "",
-        "Author": "",
-        "Illustrator": "",
-        "slug": "",
-        "description": "", 
+        "Author": "Alan Moore",
+        "Illustrator": "Brian Bolland",
+        "slug": "bat-man",
+        "description": "Critically acclaimed author Alan Moore redefined graphic novel story-telling with Watchmen and V for Vendetta. In Batman: The Killing Joke, he takes on the origin of comics' greatest super-villain, The Joker, and changes Batman's world forever.", 
         "stars": "5",
-        "category": ["action", "science-fiction"]
+        "category": ["action", "science-fiction", "mystery"]
       },
       {
-        "_id": { "$oid": "" },
-        "title": "",
+        "_id": { "$oid": "0916243672" },
+        "title": "Justice League: The Darkseid War",
         "thumbnail": "",
-        "Author": "",
-        "Illustrator": "",
-        "slug": "",
-        "description": "", 
-        "stars": "5",
-        "category": ["action", "science-fiction"]
-      },
-      {
-        "_id": { "$oid": "" },
-        "title": "",
-        "thumbnail": "",
-        "Author": "",
-        "Illustrator": "",
-        "slug": "",
-        "description": "", 
-        "stars": "5",
-        "category": ["action", "science-fiction"]
-      },
-      {
-        "_id": { "$oid": "" },
-        "title": "",
-        "thumbnail": "",
-        "Author": "",
-        "Illustrator": "",
-        "slug": "",
-        "description": "", 
-        "stars": "5",
-        "category": ["action", "science-fiction"]
-      },
-      {
-        "_id": { "$oid": "" },
-        "title": "",
-        "thumbnail": "",
-        "Author": "",
-        "Illustrator": "",
-        "slug": "",
-        "description": "", 
-        "stars": "5",
-        "category": ["action", "science-fiction"]
-      },
-      {
-        "_id": { "$oid": "" },
-        "title": "",
-        "thumbnail": "",
-        "Author": "",
-        "Illustrator": "",
-        "slug": "",
-        "description": "", 
+        "Author": "Geoff Johns",
+        "Illustrator": "Jason Fabok, Francis Manapul, Brad Anderson",
+        "slug": "justice league",
+        "description": "Years ago the Justice League first formed to stop Darkseid and his parademon army from invading Earth. Now Darkseid will once again make the planet a war zone, as Earth becomes the front line in his battle with the Anti-Monitor, a universe-devouring creature who can reduce whole planets to rubble. To stop their planet from becoming collateral damage in this war of gods, the Justice League must uncover the secrets of the New Gods and learn the hidden truth behind the Anti-Monitor's identity and his history with Darkseid.", 
         "stars": "5",
         "category": ["action", "science-fiction"]
       }
-   
   ]
