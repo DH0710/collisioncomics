@@ -11,6 +11,10 @@ const ComicsSchema = new Schema({
    type: String,
    // required: true,
 }, 
+thumbnail: {
+   type: String,
+   // required: true,
+}, 
 Author: {
    type: String,
    // required: true,
@@ -24,10 +28,6 @@ Illustrator: {
     // required: true,
  }, 
  description: {
-    type: String,
-    // required: true,
- }, 
- thumbnail: {
     type: String,
     // required: true,
  }, 

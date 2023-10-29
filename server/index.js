@@ -16,6 +16,31 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
 
+app.get("/api/Comics", async (req, res) => {
+    try {
+        const data = await Comics.find({});
+        res.json(data);
+        
+
+    } catch (err) {
+        res.status(500).json({error: "An error occurred while fetching Comics"});
+
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 app.get("/", (req, res) => {
     res.json("Hello Damien your server is running now!")
 });
