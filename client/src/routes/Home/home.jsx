@@ -4,8 +4,8 @@ function Home () {
     return (
         <div>
             <h1>Home</h1>
-            <p></p>
-            <p></p>
+            <p>Minature Vite +  React demo website</p>
+            <p>It uses Node.js, Express & MongoDB as a backend</p>
 
 
         </div>
