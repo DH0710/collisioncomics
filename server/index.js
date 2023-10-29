@@ -6,6 +6,7 @@ const connectDB = require("./connectDB");
 const Comics = require("./models/Comics");
 
 
+
 const app = express();
 const PORT = process.env.PORT || 8000;
 
@@ -18,8 +19,11 @@ app.use(express.json());
 
 app.get("/api/Comics", async (req, res) => {
     try {
+        
         const data = await Comics.find({});
         res.json(data);
+       
+        
         
 
     } catch (err) {
