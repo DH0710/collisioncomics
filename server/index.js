@@ -3,7 +3,7 @@ require("dotenv").config();
 const cors = require("cors");
 const express = require("express");
 const connectDB = require("./connectDB");
-const Comics = require("./models/Comics");
+const Comics = require("./models/comics");
 
 
 
@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
 
-app.get("/api/Comics", async (req, res) => {
+app.get("/api/comics", async (req, res) => {
     try {
         
         const data = await Comics.find({});
