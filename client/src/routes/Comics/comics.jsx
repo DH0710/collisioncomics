@@ -5,7 +5,20 @@ function Comics () {
 
 return (
 
-<div> Comics </div>
+<div> 
+
+    <h1> Comics </h1>
+
+    <p> Comic book database will be displayed here  </p>
+    
+    
+    
+    
+    
+    
+    
+     </div>
+
 
 
 
