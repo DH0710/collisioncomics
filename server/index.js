@@ -15,12 +15,24 @@ connectDB();
 app.use(cors());
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
+app.use("/uploads", express.static("uploads"));
 
 
 app.get("/api/comics", async (req, res) => {
     try {
+
+        const category = req.query.category;
+        console.log(category);
+
+        const filter = {};
+        if (category) {
+            filter.category = category;
+        }
+
+
+
         
-        const data = await Comics.find({});
+        const data = await Comics.find(filter);
         res.json(data);
        
         
