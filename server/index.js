@@ -46,6 +46,25 @@ app.get("/api/comics", async (req, res) => {
 
 
 
+app.get("/api/comics/:slug", async (req, res) => {
+    try {
+        const slugParam = req.params.slug;
+        
+
+
+       
+
+
+        
+        const data = await Comics.findOne({slug: slugParam});
+        res.json(data);
+    } catch (err) {
+        res.status(500).json({error: "An error occurred while fetching Comics"});
+
+    }
+});
+
+
 
 
 
