@@ -35,6 +35,18 @@ function singleComic() {
         fetchData();
     }, []);
 
+    function StarRating ({numberOfStars}) {
+        const stars = []
+
+        for (let i =0; i < numberOfStars; i++) {
+            stars.push(<span key={i}>💥</span> )
+        }
+
+        return <div> Rating: {stars} </div>
+    }
+
+    
+
 
 
     return (
@@ -59,7 +71,7 @@ function singleComic() {
 
    <h1>{data?.title}</h1>
         <p>{data?.description}</p>
-        <p> Stars: </p>
+       <StarRating numberOfStars={data?.stars}></StarRating>
         
 
         <p>Category</p>
