@@ -35,61 +35,62 @@ function singleComic() {
         fetchData();
     }, []);
 
-    function StarRating ({numberOfStars}) {
+    function StarRating({ numberOfStars }) {
         const stars = []
 
-        for (let i =0; i < numberOfStars; i++) {
-            stars.push(<span key={i}>💥</span> )
+        for (let i = 0; i < numberOfStars; i++) {
+            stars.push(<span key={i}>💥</span>)
         }
 
         return <div> Rating: {stars} </div>
     }
 
-    
+
 
 
 
     return (
         <div>
-            
-   <Link to={"/comics"}> Back to Comics</Link>
 
-   <div className="comicdetails"> 
+            <Link to={"/comics"}> Back to Comics</Link>
 
-   <div className="col-1">
+            <div className="comicdetails">
 
-   <img src={`http://localhost:8000/uploads/${data?.thumbnail}`}
-        alt={data?.title} />
-        
+                <div className="col-1">
 
-
-   </div>
+                    <img src={`http://localhost:8000/uploads/${data?.thumbnail}`}
+                        alt={data?.title} />
+                        <Link to={`/editcomic/${data.slug}`}>Edit</Link>
 
 
 
-   <div className="col-2">
-
-   <h1>{data?.title}</h1>
-        <p>{data?.description}</p>
-       <StarRating numberOfStars={data?.stars}></StarRating>
-        
-
-        <p>Category</p>
-        <ul>
-          {data?.category?.map((item, index)=> (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
+                </div>
 
 
-   </div>
-   
-   
-   
-   
-   
-   
-   </div>
+
+                <div className="col-2">
+
+                    <h1>{data?.title}</h1>
+                    <p>{data?.description}</p>
+                    <StarRating numberOfStars={data?.stars}></StarRating>
+
+
+                    <p>Category</p>
+                    <ul>
+                        {data?.category?.map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
+
+
+                </div>
+
+
+
+
+
+
+            </div>
 
 
 
