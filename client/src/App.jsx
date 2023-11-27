@@ -5,6 +5,7 @@ import Comics from "./routes/Comics/comics.jsx"
 import SingleComic from "./routes/Comics/singleComic.jsx";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
+import CreateComic from "./routes/Comics/createComic.jsx";
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path = "/about" element = { <About/> } />
           <Route path = "/comics" element = { <Comics/> } />
           <Route path = "/comics/:slug" element = { <SingleComic/> } />
+          <Route path = "/createComic" element = { <CreateComic/> } />
          
         </Routes>
         <Footer/>

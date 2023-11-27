@@ -42,7 +42,7 @@ function singleComic() {
             stars.push(<span key={i}>💥</span>)
         }
 
-        return <div> Rating: {stars} </div>
+        return <div> Collision Rating: {stars} </div>
     }
 
 
