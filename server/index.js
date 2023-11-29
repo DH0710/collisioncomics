@@ -62,6 +62,8 @@ app.post("/api/comics", async (req, res) => {
             category: req.body.category
         })
 
+        await Comic.create(newComic);
+
         // const data = await Comics.findOne({});
         res.json("Data Submitted");
     } catch (err) {
