@@ -52,26 +52,24 @@ app.get("/api/comics/:slug", async (req, res) => {
 
 app.post("/api/comics", async (req, res) => {
     try {
-        console.log(req.body);
-
-        const newComic = new Comic ({
-            title: req.body.title, 
-            slug: req.body.slug,
-            stars: req.body.stars,
-            description: req.body.description,
-            category: req.body.category
-        })
-
-        await Comic.create(newComic);
-
-        // const data = await Comics.findOne({});
-        res.json("Data Submitted");
+      console.log(req.body);
+     
+  
+      const newComic = new Comics({
+        title: req.body.title,
+        slug: req.body.slug,
+        stars: req.body.stars,
+        description: req.body.description,
+        category: req.body.category,
+        // thumbnail: req.file.filename,
+      })
+  
+      await Comics.create(newComic);
+      res.json("Data Submitted");
     } catch (err) {
-        res.status(500).json({ error: "An error occurred while fetching Comics" });
-
+      res.status(500).json({ error: "An error occurred while fetching books." });
     }
-});
-
+  });
 
 
 
