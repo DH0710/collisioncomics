@@ -10,7 +10,7 @@ const createComic = () => {
     const [categories, setCategories] = useState([]);
     const [thumbnail, setThumbnail] = useState(null);
     const [submitted, setSubmitted] = useState("");
-    const [image, setImage] = useState(NoImageSelected)
+    const [image, setImage] = useState(NoImagePlaceholder)
 
     const createComic = async (e) => {
 
@@ -20,14 +20,14 @@ const createComic = () => {
         const formData = new FormData();
         formData.append("title", title);
         formData.append("slug", slug);
-        formData.append("collisions", collision);
+        formData.append("collision", collision);
         formData.append("description", description);
         formData.append("category", categories);
         formData.append("thumbnail", thumbnail);
 
         try {
 
-            const response = await fetch("http://localhost:8000/api/comics", {
+            const response = await fetch ("http://localhost:8000/api/comics", {
                 method: "POST",
                 body: formData,
 
@@ -128,7 +128,7 @@ const createComic = () => {
                             <label> Collision Rating </label>
                             <input
                                 type="text"
-                                value={collision}
+                                value={collisions}
                                 onChange={(e) => setCollision(e.target.value)}>
                             </input>
 

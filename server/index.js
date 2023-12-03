@@ -89,6 +89,52 @@ app.post("/api/comics", upload.single("thumbnail") ,async (req, res) => {
       res.status(500).json({ error: "An error occurred while fetching comics." });
     }
   });
+
+
+
+
+
+
+
+  app.put("/api/comics", upload.single("thumbnail") ,async (req, res) => {
+    try {
+
+        const comicId = req.body.comicId;
+
+        
+
+
+
+      const updateComic = {
+        title: req.body.title,
+        slug: req.body.slug,
+        collisions: req.body.collisions,
+        description: req.body.description,
+        category: req.body.category,
+      }
+
+      if (req.file) {
+        updateComic.thumbnail = req.file.filename;
+      }
+  
+      await Comics.findByIdAndUpdate(comicId, updateComic);
+      res.json("Data Submitted");
+    } catch (err) {
+      res.status(500).json({ error: "An error occurred while fetching comics." });
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
   
 
 
