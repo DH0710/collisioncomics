@@ -21,28 +21,21 @@ function singleComic() {
 
                 const jsonData = await response.json()
                 setData(jsonData);
-
-
-
-
             } catch (err) {
                 console.log(err);
-
-
-
             }
-        }
+        };
         fetchData();
     }, []);
 
-    function StarRating({ numberOfStars }) {
-        const stars = []
+    function CollisionRating({ numberOfCollisions }) {
+        const collisions = [];
 
-        for (let i = 0; i < numberOfStars; i++) {
-            stars.push(<span key={i}>💥</span>)
+        for (let i = 0; i < numberOfCollisions; i++) {
+            collisions.push(<span key={i}>💥</span>)
         }
 
-        return <div> Collision Rating: {stars} </div>
+        return <div> Collision Rating: {collisions} </div>
     }
 
 
@@ -60,7 +53,7 @@ function singleComic() {
 
                     <img src={`http://localhost:8000/uploads/${data?.thumbnail}`}
                         alt={data?.title} />
-                        <Link to={`/editcomic/${data.slug}`}>Edit</Link>
+                    <Link to={`/editcomic/${data.slug}`}>Edit</Link>
 
 
 
@@ -72,7 +65,7 @@ function singleComic() {
 
                     <h1>{data?.title}</h1>
                     <p>{data?.description}</p>
-                    <StarRating numberOfStars={data?.stars}></StarRating>
+                    <CollisionRating numberOfCollisions={data?.collisions}></CollisionRating>
 
 
                     <p>Category</p>

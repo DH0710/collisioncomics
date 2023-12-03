@@ -8,7 +8,7 @@
       "Illustrator": "Leonardo Manco",
       "slug": "uncanny-xforce",
       "description": "Rick Remender's extraordinary, critically acclaimed X-Force saga is collected across two volumes! Psylocke, Archangel, Deadpool and Fantomex sign up for Wolverine's secret squad of assassins, but their first mission--to deal with the despot Apocalypse, reborn as an innocent child--casts a long shadow. As X-Force struggles to come to terms with their actions, startlingly familiar Deathloks attack from the future--targeting Fantomex for an early execution! And when Archangel unravels, picking up where Apocalypse left off, X-Force must travel to the one place that holds the key to saving him: the Age of Apocalypse! All life on Earth is forfeit if the Dark Angel succeeds, but can even a team of hardened killers assassinate one of their own?",
-      "stars": "5",
+      "collision rating": "5",
       "category": ["action", "science-fiction"]
     },
     {
@@ -20,7 +20,7 @@
         "Illustrator": "Sara Pichelli",
         "slug": "spider-man",
         "description": "Miles Morales is hitting the big time! Not only is he joining the Marvel Universe, but he's also a card-carrying Avenger, rubbing shoulders with the likes of Iron Man, Thor and Captain America! And he'll soon be a media sensation in this All-New, All-Different New York! ", 
-        "stars": "4.7",
+        "collision rating": "3",
         "category": ["action", "science-fiction"]
       },
       {
@@ -32,7 +32,7 @@
         "Illustrator": "Andy Kubert",
         "slug": "flash-point",
         "description": "Not a dream, not an imaginary story, not an elseworld. This is Flash Fact: When Barry Allen wakes at his desk, he discovers the world has changed. Family is alive, loved ones are strangers, and close friends are different, gone or worse. It's a world on the brink of a cataclysmic war—but where are Earth's Greatest Heroes to stop it? It's a place where America's last hope is Cyborg, who hopes to gather the forces of The Outsider, The Secret 7, Shazam!, Citizen Cold and other new and familiar-yetaltered faces! It's a world that could be running out of time, if The Flash can't find the villain who altered the time line!", 
-        "stars": "4.8",
+        "collision rating": "4.8",
         "category": ["action", "science-fiction"]
       },
       {
@@ -44,7 +44,7 @@
         "Illustrator": "Todd Klein",
         "slug": "kingdom-come",
         "description": "In the near-future world of Kingdom Come, superheroes are ubiquitous, but heroism is rare. After decades as Earth's champions, the members of the Justice League have all retreated out of the public eye, replaced with a new generation of crime-fighters whose brand of justice leaves humanity terrified, rather than inspired. But with the planet's future in jeopardy, Superman, Wonder Woman and Batman must come out of retirement to make one last stand for truth and justice...", 
-        "stars": "4.9",
+        "collision rating": "4.9",
         "category": ["action", "science-fiction"]
       },
       {
@@ -56,7 +56,7 @@
         "Illustrator": "Frank Miller",
         "slug": "sin-city",
         "description": "There is no light in a place like Sin City—only misery, crime, perversion . . . But for a single moment, amid the filth and degenerates, the hulking and unstable ex-con Marv has found an angel. She says her name is Goldie—a goddess who has blessed this wretched low-life with a night of heaven. But good things never last—a few hours later, Goldie is dead—murdered by his side without a mark on her body. Who was she? And who wanted her dead? The cops are on their way—it smells like a frame job, and this time, they won’t let him live. Whoever killed Goldie . . . is going to pay. Marv’s got a soul to send to hell, and it’s going to get nasty.", 
-        "stars": "4.8",
+        "collision rating": "4.8",
         "category": ["action", "mystery"]
       },
       {
@@ -68,7 +68,7 @@
         "Illustrator": "Various",
         "slug": "tmnt-the-last-ronin",
         "description": "What terrible events destroyed his family and left New York a crumbling, post-apocalyptic nightmare? All will be revealed in this climactic Turtle tale that sees longtime friends becoming enemies and new allies emerging in the most unexpected places. Can the surviving Turtle triumph", 
-        "stars": "5",
+        "collision rating": "5",
         "category": ["action", "science-fiction"]
       },
       {
@@ -80,7 +80,7 @@
         "Illustrator": "Akeussel",
         "slug": "all-talk",
         "description": "Rahim is a suburban kid like any other, a “good kid.” Chilling with his boys, hearing the legends of “Immortal Al,” the greatest gangster who ever lived, it's hard not to get starry eyed and soon, Rahim starts dreaming of becoming a kingpin, idolizing his local gangsters in the hopes of climbing their ranks. But his friends joke that he's all talk and no action. Until one day, when he sees an opportunity to prove himself… but how far will he take it before there’s no turning back?", 
-        "stars": "5",
+        "collision rating": "5",
         "category": ["mystery"]
       },
       {
@@ -92,7 +92,7 @@
         "Illustrator": "Alan Moore",
         "slug": "watch-man",
         "description": "Watchmen begins as a murder-mystery, but soon unfolds into a planet-altering conspiracy. As the resolution comes to a head, the unlikely group of reunited heroes--Rorschach, Nite Owl, Silk Spectre, Dr. Manhattan and Ozymandias--have to test the limits of their convictions and ask themselves where the true line is between good and evil.", 
-        "stars": "5",
+        "collision rating": "5",
         "category": ["action", "mystery"]
       }
   ]

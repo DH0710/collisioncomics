@@ -3,7 +3,8 @@ require("dotenv").config();
 const cors = require("cors");
 const express = require("express");
 const connectDB = require("./connectDB");
-const Comics = require("./models/comics");
+const Comics = require("./models/Comics");
+const multer = require("multer");
 
 
 
@@ -40,36 +41,55 @@ app.get("/api/comics", async (req, res) => {
 
 app.get("/api/comics/:slug", async (req, res) => {
     try {
-        const slugParam = req.params.slug;
-        const data = await Comics.findOne({ slug: slugParam });
-        res.json(data);
-    } catch (err) {
-        res.status(500).json({ error: "An error occurred while fetching Comics" });
-
+      const slugParam = req.params.slug;
+      const data = await Comics.findOne({ slug: slugParam});
+  
+      if (!data) {
+        throw new Error("An error occurred while fetching a comic.");
+      }
+      
+      res.status(201).json(data);
+    } catch (error) {
+      res.status(500).json({ error: "An error occurred while fetching comics." });
     }
-});
+  });
 
 
-app.post("/api/comics", async (req, res) => {
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'uploads/')
+    },
+    filename: function (req, file, cb) {
+      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+      cb(null, uniqueSuffix + "-" + file.originalname);
+    }
+  })
+
+  const upload = multer({ storage: storage })
+
+
+app.post("/api/comics", upload.single("thumbnail") ,async (req, res) => {
     try {
       console.log(req.body);
+      console.log(req.file);
      
   
       const newComic = new Comics({
         title: req.body.title,
         slug: req.body.slug,
-        stars: req.body.stars,
+        collisions: req.body.collisions,
         description: req.body.description,
         category: req.body.category,
-        // thumbnail: req.file.filename,
+        thumbnail: req.file.filename,
       })
   
       await Comics.create(newComic);
       res.json("Data Submitted");
     } catch (err) {
-      res.status(500).json({ error: "An error occurred while fetching books." });
+      res.status(500).json({ error: "An error occurred while fetching comics." });
     }
   });
+  
 
 
 
@@ -84,10 +104,6 @@ app.get("/", (req, res) => {
 app.get("*", (req, res) => {
     res.sendStatus("404")
 });
-
-
-
-
 
 app.listen(PORT, () => {
     console.log(`Server is running on Port: ${PORT}`);

@@ -31,7 +31,7 @@ Illustrator: {
     type: String,
     // required: true,
  }, 
- stars: {
+ collisions: {
     type: Number,
     // required: true,
  }, 

@@ -5,30 +5,50 @@ const createComic = () => {
 
     const [title, setTitle] = useState("");
     const [slug, setSlug] = useState("");
-    const [stars, setStars] = useState(0);
+    const [collision, setCollision] = useState(0);
     const [description, setDescription] = useState("");
     const [categories, setCategories] = useState([]);
     const [thumbnail, setThumbnail] = useState(null);
     const [submitted, setSubmitted] = useState("");
+    const [image, setImage] = useState(NoImageSelected)
 
     const createComic = async (e) => {
 
         e.preventDefault();
         console.table([title, slug]);
 
+        const formData = new FormData();
+        formData.append("title", title);
+        formData.append("slug", slug);
+        formData.append("collisions", collision);
+        formData.append("description", description);
+        formData.append("category", categories);
+        formData.append("thumbnail", thumbnail);
+
         try {
+
             const response = await fetch("http://localhost:8000/api/comics", {
+                method: "POST",
+                body: formData,
+
+            });
+
+            /* const response = await fetch("http://localhost:8000/api/comics", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(
-                    {
-                        title: title,
-                        slug: slug,
-
-                    }
-                )
-
-            })
+                     {
+                         title: title,
+                         slug: slug,
+                         collisions: collisions,
+                         description: description,
+                         category: categories,
+ 
+                     }),
+ 
+             });
+ 
+             */
 
             if (response.ok) {
                 setTitle("");
@@ -39,25 +59,22 @@ const createComic = () => {
                 console.log("Failed to submit data")
             }
 
-
-
-
-
-
-
-
-
         } catch (err) {
             console.log(error);
-
         }
+    };
 
 
-
-
-
+    const handleCatergoryChange = (e) => {
+        setCategories(e.target.value.split(",").map((category) => category.trim()));
     }
 
+    const onImageChange = (e) => {
+        if (e.target.files && e.target.files[0]) {
+            setImage(URL.createObjectURL(e.target.files[0]));
+            setThumbnail(e.target.files[0])
+        }
+    }
 
 
 
@@ -80,9 +97,11 @@ const createComic = () => {
                 <form className='comicdetails' onSubmit={createComic}>
                     <div className='col-1'>
                         <label> Upload Thumbnail</label>
-                        <img src={NoImagePlaceholder} alt="preview image"></img>
+                        <img src={image} alt="preview image"></img>
 
-                        <input type="file" accept="image/gif, image/jpeg, image/png" />
+                        <input
+                            onChange={onImageChange}
+                            type="file" accept="image/gif, image/jpeg, image/png" />
 
                     </div>
 
@@ -106,25 +125,35 @@ const createComic = () => {
                                 onChange={(e) => setSlug(e.target.value)}>
                             </input>
 
-                            <label> Stars </label>
+                            <label> Collision Rating </label>
                             <input
                                 type="text"
-                                value={stars}
-                                onChange={(e) => setStars(e.target.value)}>
+                                value={collision}
+                                onChange={(e) => setCollision(e.target.value)}>
                             </input>
 
                             <label> Description </label>
                             <textarea
-                               
+                                rows="4"
+                                col="50"
                                 value={description}
                                 onChange={(e) => setDescription(e.target.value)}>
                             </textarea>
 
-                            <label> Categories </label>
+                            <label> Categories (comma-seperated) </label>
                             <input
+
                                 type="text"
-                                value={}
-                                onChange={(e) => setCategories(e.target.value)}>
+                                value={categories}
+                                onChange={handleCatergoryChange}>
+                            </input>
+
+                            <label> Thumbnail </label>
+                            <input
+
+                                type="null"
+                                value={thumbnail}
+                                onChange={(e) => setThumbnail(e.target.value)}>
                             </input>
 
 
