@@ -23,8 +23,8 @@ function App() {
           <Route path = "/about" element = { <About/> } />
           <Route path = "/comics" element = { <Comics/> } />
           <Route path = "/comics/:slug" element = { <SingleComic/> } />
-          <Route path = "/createComic" element = { <CreateComic/> } />
-          <Route path = "/editComic/:slug" element = { <EditComic/> } />
+          <Route path = "/createcomic" element = { <CreateComic/> } />
+          <Route path = "/editcomic/:slug" element = { <EditComic/> } />
          
         </Routes>
         <Footer/>

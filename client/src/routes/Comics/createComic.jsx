@@ -128,7 +128,7 @@ const createComic = () => {
                             <label> Collision Rating </label>
                             <input
                                 type="text"
-                                value={collisions}
+                                value={collision}
                                 onChange={(e) => setCollision(e.target.value)}>
                             </input>
 
