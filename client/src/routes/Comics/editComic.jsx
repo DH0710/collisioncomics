@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import NoImagePlaceholder from "../../assets/No-Image-Placeholder.svg.png";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 
 const editComic = () => {
 
-    const navigate = useNavigate();
+
     const urlSlug = useParams();
-    const baseUrl = `http://localhost:8000/api/books/${urlSlug.slug}`;
+    const baseUrl = `http://localhost:8000/api/comics/${urlSlug.slug}`;
 
 
     const [comicId, setComicId] = useState("");
@@ -50,7 +50,7 @@ const editComic = () => {
         console.table([title, slug]);
 
         const formData = new FormData();
-        formData.append("bookId", bookId);
+        formData.append("comicId", comicId);
         formData.append("title", title);
         formData.append("slug", slug);
         formData.append("collision", collision);
