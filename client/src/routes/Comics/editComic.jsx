@@ -56,7 +56,7 @@ const editComic = () => {
         formData.append("collision", collision);
         formData.append("description", description);
         formData.append("category", categories);
-        formData.append("thumbnail", thumbnail);
+        
 
         if (thumbnail) {
             formData.append("thumbnail", thumbnail);

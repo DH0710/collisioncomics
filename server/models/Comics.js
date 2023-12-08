@@ -31,7 +31,7 @@ Illustrator: {
     type: String,
     // required: true,
  }, 
- collisions: {
+ collision: {
     type: Number,
     // required: true,
  }, 

@@ -77,7 +77,7 @@ app.post("/api/comics", upload.single("thumbnail"), async (req, res) => {
     const newComic = new Comics({
       title: req.body.title,
       slug: req.body.slug,
-      collisions: req.body.collisions,
+      collision: req.body.collision,
       description: req.body.description,
       category: req.body.category,
       thumbnail: req.file.filename,
@@ -104,7 +104,7 @@ app.put("/api/comics", upload.single("thumbnail"), async (req, res) => {
     const editComic = {
       title: req.body.title,
       slug: req.body.slug,
-      collisions: req.body.collisions,
+      collision: req.body.collision,
       description: req.body.description,
       category: req.body.category,
     }
@@ -121,15 +121,17 @@ app.put("/api/comics", upload.single("thumbnail"), async (req, res) => {
 });
 
 
+app.delete("/api/comics/:id", async (req,res) => {
+  const comicId = req.params.id;
+   try {
+    await Comics.deleteOne({_id: comicId});
+    res.json("Hoe dare you!" + req.body.comicId);
 
+   } catch (err) {
+    res.json(error)
 
-
-
-
-
-
-
-
+   }
+})
 
 
 
