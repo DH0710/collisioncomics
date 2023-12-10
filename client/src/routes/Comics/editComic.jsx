@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import NoImagePlaceholder from "../../assets/No-Image-Placeholder.svg.png";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 
 const editComic = () => {
+
+    const navigate = useNavigate();
 
 
     const urlSlug = useParams();
@@ -96,6 +98,30 @@ const editComic = () => {
         }
     };
 
+    const removeComic = async(e) => {
+
+        e.preventDefault();
+
+         try {
+            const response = await fetch (
+                "http://localhost:8000/api/comics/" + comicId,
+                {
+                    method: "DELETE",
+                }
+            );
+
+            if (response.ok) {
+                navigate("/comics");
+                console.log("Comic removed");
+            }
+
+         } catch (error) {
+            console.error(error);
+
+         }
+
+    };
+
 
 
 
@@ -108,6 +134,16 @@ const editComic = () => {
             <p> This is where we utilize NodeJs, Express & MongoDB to grab data. The
                 data below is pulled from MongoDB database.
             </p>
+
+            <button onClick={removeComic} className="delete"> 
+            Delete Comic
+
+            </button>
+
+
+
+
+
 
             {submitted ? (
 
