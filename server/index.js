@@ -125,13 +125,13 @@ app.delete("/api/comics/:id", async (req,res) => {
   const comicId = req.params.id;
    try {
     await Comics.deleteOne({_id: comicId});
-    res.json("Hoe dare you!" + req.body.comicId);
+    res.json("How dare you!" + req.body.comicId);
 
-   } catch (err) {
+   } catch (error) {
     res.json(error)
 
    }
-})
+});
 
 
 

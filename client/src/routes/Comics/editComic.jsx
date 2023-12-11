@@ -6,8 +6,6 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 const editComic = () => {
 
     const navigate = useNavigate();
-
-
     const urlSlug = useParams();
     const baseUrl = `http://localhost:8000/api/comics/${urlSlug.slug}`;
 
@@ -58,7 +56,7 @@ const editComic = () => {
         formData.append("collision", collision);
         formData.append("description", description);
         formData.append("category", categories);
-        
+
 
         if (thumbnail) {
             formData.append("thumbnail", thumbnail);
@@ -66,7 +64,7 @@ const editComic = () => {
 
         try {
 
-            const response = await fetch("http://localhost:8000/api/comics", {
+            const response = await fetch("http://localhost:8000/api/comics/", {
                 method: "PUT",
                 body: formData,
 
@@ -98,27 +96,28 @@ const editComic = () => {
         }
     };
 
-    const removeComic = async(e) => {
+    const removeComic = async (e) => {
+
+
 
         e.preventDefault();
 
-         try {
-            const response = await fetch (
-                "http://localhost:8000/api/comics/" + comicId,
+
+        try {
+            const response = await fetch("http://localhost:8000/api/comics/" + comicId,
                 {
                     method: "DELETE",
-                }
-            );
+                });
 
             if (response.ok) {
                 navigate("/comics");
                 console.log("Comic removed");
             }
 
-         } catch (error) {
+        } catch (error) {
             console.error(error);
 
-         }
+        }
 
     };
 
@@ -135,9 +134,8 @@ const editComic = () => {
                 data below is pulled from MongoDB database.
             </p>
 
-            <button onClick={removeComic} className="delete"> 
-            Delete Comic
-
+            <button onClick={removeComic} className="delete">
+                Delete Comic
             </button>
 
 

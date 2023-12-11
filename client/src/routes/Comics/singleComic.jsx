@@ -28,6 +28,8 @@ function singleComic() {
         fetchData();
     }, []);
 
+
+    
     function CollisionRating({ numberOfCollisions }) {
         const collisions = [];
 
@@ -65,7 +67,7 @@ function singleComic() {
 
                     <h1>{data?.title}</h1>
                     <p>{data?.description}</p>
-                    <CollisionRating numberOfCollisions={data?.collisions}></CollisionRating>
+                    <CollisionRating numberOfCollisions={data?.collision}></CollisionRating>
 
 
                     <p>Category</p>
