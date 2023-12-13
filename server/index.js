@@ -16,13 +16,7 @@ const PORT = process.env.PORT || 8000;
 connectDB();
 app.use(cors());
 
-app.use(cors(
-  {
-    origin: ["https://collisioncomics-1whq.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true
-  }
-));
+
 
 
 
@@ -31,7 +25,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
-mongoose.connect("mongodb+srv://DH0710:<Chrome$0710>@merntutorial.gvfxb0s.mongodb.net/?retryWrites=true&w=majority")
 
 
 

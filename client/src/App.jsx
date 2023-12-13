@@ -8,9 +8,6 @@ import Footer from "./components/Footer.jsx";
 import CreateComic from "./routes/Comics/createComic.jsx";
 import EditComic from "./routes/Comics/editComic.jsx";
 
-axios.defaults.withCredentials = true; 
-
-axios.post("https://collisioncomics-1bsr.vercel.app/")
 
 
 function App() {
