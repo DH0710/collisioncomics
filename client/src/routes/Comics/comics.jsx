@@ -67,6 +67,7 @@ function Comics() {
                     <option value="mystery">Mystery</option>
                     <option value="action">Action</option>
                     <option value="science-fiction">Science Fiction</option>
+                    <option value="space-opera">Space Opera</option>
 
 
 
