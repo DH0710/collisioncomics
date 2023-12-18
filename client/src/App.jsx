@@ -24,7 +24,6 @@ function App() {
           <Route path = "/comics/:slug" element = { <SingleComic/> } />
           <Route path = "/createcomic" element = { <CreateComic/> } />
           <Route path = "/editcomic/:slug" element = { <EditComic/> } />
-         
         </Routes>
         <Footer/>
       </Router>
