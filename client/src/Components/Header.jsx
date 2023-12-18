@@ -7,7 +7,7 @@ function Header () {
     return (
         <header> 
         <Link to="/" className="logo"> 
-        <img src= {logo} alt="Collision Comics"/> Collision Comics
+        <img src= {logo} alt="ReactJs"/> Collision Comics
         </Link> 
 
         <nav> 
