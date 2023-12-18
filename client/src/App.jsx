@@ -3,10 +3,10 @@ import Home from "./routes/Home/home.jsx";
 import About from "./routes/About/about.jsx";
 import Comics from "./routes/Comics/comics.jsx"
 import SingleComic from "./routes/Comics/singleComic.jsx";
-import Footer from "./components/Footer.jsx";
-import Header from "./components/Header.jsx";
 import CreateComic from "./routes/Comics/createComic.jsx";
 import EditComic from "./routes/Comics/editComic.jsx";
+import Footer from "./components/Footer.jsx";
+import Header from "./components/Header.jsx";
 
 
 
