@@ -44,7 +44,7 @@ app.get("/api/comics", async (req, res) => {
     }
     const data = await Comics.find(filter);
     res.json(data);
-  } catch (err) {
+  } catch (error) {
     res.status(500).json({ error: "An error occurred while fetching Comics" });
 
   }
