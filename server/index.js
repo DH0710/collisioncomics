@@ -5,7 +5,6 @@ const express = require("express");
 const connectDB = require("./connectDB");
 const Comics = require("./models/Comics");
 const multer = require("multer");
-const { default: mongoose } = require("mongoose");
 
 
 
@@ -98,7 +97,7 @@ app.post("/api/comics", upload.single("thumbnail"), async (req, res) => {
 
     await Comics.create(newComic);
     res.json("Data Submitted");
-  } catch (err) {
+  } catch (error) {
     res.status(500).json({ error: "An error occurred while fetching comics." });
   }
 });
